@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Tere Liye</title>
+  <style>
+    /* ===== TYPOGRAPHY ===== */
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      background-color: #f4f6f8;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Segoe UI', sans-serif;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    /* ===== LAYOUT ===== */
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #34495e;
+      padding: 12px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: 85%;
+      margin: 30px auto;
+      display: grid;
+      grid-template-columns: 3fr 1fr; /* layout kolom */
+      gap: 25px;
+    }
+
+    main article, aside, section {
+      background-color: white;
+      padding: 20px; /* spacing */
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    article p {
+      text-align: justify;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 14px;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background-color: #2980b9;
+    }
+
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: 1fr;
+        width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1><p style="color: white">Blog Penulis Tere Liye</p></h1>
+  <p>Artikel, Buku, dan Penulis</p>
+</header>
+
+<nav>
+  <a href="#list">List Artikel</a>
+  <a href="#detail">Detail Artikel</a>
+  <a href="#tentang">Tentang Penulis</a>
+</nav>
+
+<div class="container">
+
+  <!-- ===== LIST ARTIKEL ===== -->
+  <main>
+    <article id="list">
+      <h2>List Artikel</h2>
+      <h3>1. Hujan</h3> <p><img src="hujan.jpg" alt="hujan" height="300px" width="300px"></p>
+      <p>Novel bertajuk Hujan merupakan karya Tere Liye yang berhasil menduduki Best Seller. 
+        Hujan ini berhasil diterbitkan oleh penerbit Gramedia Pustaka Utama pada Januari 2016 lalu. 
+        Novel setebal 320 halaman ini, mengambil latar di tahun 2042 hingga 2050 dengan genre science fiction (sci-fi) yang mengisahkan dunia di masa depan penuh akan kecanggihan teknologi.</p>
+      <a class="btn" href="https://www.gramedia.com/best-seller/review-novel-hujan-karya-tere-liye/" onclick="showDetail('hujan')">Baca Selengkapnya</a>
+
+      <h3>2. Bumi</h3> <p><img src="bumi.jpg" alt="bumi" height="300px" width="300px"></p>
+      <p>Buku Bumi karya Tere Liye mengisahkan petualangan Raib, gadis remaja yang bisa menghilang, bersama dua sahabatnya, Seli (bisa memunculkan petir) dan Ali (jenius), yang menemukan dunia paralel dengan klan-klan seperti Klan Bulan, Klan Matahari, dan Klan Bumi, 
+        serta melawan musuh bernama Tamus yang ingin menguasai dunia, mengajarkan nilai persahabatan, keberanian, dan kerjasama antar-klan untuk menghadapi tantangan dan mengungkap misteri dunia paralel tersebut.</p>
+      <a class="btn" href="https://www.gramedia.com/best-seller/resensi-novel-bumi-tere-liye/" onclick="showDetail('bumi')">Baca Selengkapnya</a>
+
+      <h3>3. Rindu</h3> <p><img src="rindu.jpg" alt="rindu" height="300px" width="300px"></p>
+      <p>Rindu adalah novel karya Tere Liye yang diterbitkan tahun 2014, berlatar belakang masa penjajahan Belanda, mengisahkan perjalanan haji di atas kapal uap Blitar Holland, dengan tema utama kerinduan pada Tuhan, keluarga, dan cinta sejati, 
+        menampilkan tokoh-tokoh beragam seperti Daeng Andipati dan Gurutta, serta pesan moral mendalam tentang hidup, kehilangan, dan keikhlasan.</p>
+      <a class="btn" href="https://www.gramedia.com/best-seller/resensi-buku-rindu-tere-liye/" onclick="showDetail('rindu')">Baca Selengkapnya</a>
+    </article>
+
+    <!-- ===== DETAIL ARTIKEL ===== -->
+    <article id="detail">
+      <h2>Detail Artikel</h2>
+      <p id="detailText">Klik tombol "Baca Selengkapnya" untuk melihat detail artikel.</p>
+    </article>
+
+    <!-- ===== TENTANG PENULIS ===== -->
+    <section id="tentang">
+      <h2>Tentang Penulis</h2>
+      <p>
+        Tere Liye memiliki nama asli <strong>Darwis</strong>. Ia lahir di Sumatera Selatan dan dikenal sebagai salah satu penulis novel paling produktif di Indonesia. Karya-karyanya mengangkat tema keluarga, persahabatan, pendidikan, dan nilai moral.
+      </p>
+      <p>
+        Selain menulis novel, Tere Liye juga aktif menyuarakan pandangannya mengenai pendidikan dan kehidupan sosial melalui berbagai tulisan.
+      </p>
+    </section>
+  </main>
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside>
+    <h3>Buku Populer</h3>
+    <ul>
+      <li>Pulang</li>
+      <li>Hujan</li>
+      <li>Negeri Para Bedebah</li>
+      <li>Bumi</li>
+      <li>Bulan</li>
+      <li>Rembulan Tenggelam di Wajahmu</li>
+      <li>Daun yang Jatuh Tak Pernah Membenci Angin</li>
+      <li>Hafalan Shalat Delisa</li>
+      <li>Tentang Kamu </li>
+      <li>Sunset bersama Rosie</li>
+    </ul>
+  </aside>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 Blog Tere Liye | HTML, CSS, JavaScript</p>
+</footer>
+
+<script>
+  function showDetail(judul) {
+    let text = '';
+
+    if (judul === 'delisa') {
+      text = 'Hafalan Shalat Delisa menceritakan kisah seorang gadis kecil yang tetap teguh menjalankan ibadah dan memiliki semangat hidup luar biasa meskipun tertimpa musibah tsunami.';
+    } else if (judul === 'bumi') {
+      text = 'Bumi adalah novel fantasi yang mengisahkan petualangan remaja bernama Raib yang menemukan dunia paralel penuh misteri dan tantangan.';
+    } else if (judul === 'rindu') {
+      text = 'Rindu mengisahkan perjalanan ibadah haji yang bukan hanya perjalanan fisik, tetapi juga perjalanan spiritual yang penuh makna.';
+    }
+
+    document.getElementById('detailText').innerText = text;
+  }
+</script>
+
+</body>
+</html>
